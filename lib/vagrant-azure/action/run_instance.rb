@@ -62,6 +62,10 @@ module VagrantPlugins
             config.winrm_https_port.nil?
           options[:availability_set_name] = config.availability_set_name unless \
             config.availability_set_name.nil?
+          options[:virtual_network_name] = config.virtual_network_name unless \
+            config.virtual_network_name.nil?
+          options[:subnet_name] = config.subnet_name unless \
+            config.subnet_name.nil?
 
           add_role = false
 

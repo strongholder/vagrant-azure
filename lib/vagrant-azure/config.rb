@@ -32,6 +32,8 @@ module VagrantPlugins
       attr_accessor :winrm_http_port
       attr_accessor :winrm_https_port
       attr_accessor :availability_set_name
+      attr_accessor :virtual_network_name
+      attr_accessor :subnet_name
 
       attr_accessor :state_read_timeout
 
@@ -60,6 +62,8 @@ module VagrantPlugins
         @winrm_http_port = UNSET_VALUE
         @winrm_https_port = UNSET_VALUE
         @availability_set_name = UNSET_VALUE
+        @virtual_network_name = UNSET_VALUE
+        @subnet_name = UNSET_VALUE
         @state_read_timeout = UNSET_VALUE
       end
 
@@ -93,6 +97,8 @@ module VagrantPlugins
         @winrm_http_port = nil if @winrm_http_port == UNSET_VALUE
         @winrm_https_port = nil if @winrm_https_port == UNSET_VALUE
         @availability_set_name = nil if @availability_set_name == UNSET_VALUE
+        @virtual_network_name = nil if @virtual_network_name == UNSET_VALUE
+        @subnet_name = nil if @subnet_name == UNSET_VALUE
 
         @state_read_timeout = 360 if @state_read_timeout == UNSET_VALUE
 
