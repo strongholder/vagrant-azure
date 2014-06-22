@@ -65,7 +65,9 @@ module VagrantPlugins
               b2.use Message, I18n.t('vagrant_azure.not_created')
               next
             end
+            
             b2.use Provision
+            b2.use SyncFolders
           end
         end
       end
